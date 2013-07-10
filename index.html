@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Ember Flashcards</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+	<script type="text/x-handlebars" data-template-name="application">
+		<div class="">
+
+		</div>
+
+		<p>{{outlet}}</p>
+	</script>
+
+	<script type="text/x-handlebars" data-template-name="decks">
+	<div>
+		{{#each deck in controller}}
+			{{deck.title}}
+		{{/each}}
+	</div>
+	</script>
+
+	<script type="text/x-handlebars" data-template-name="deck">
+
+	</script>
+</body>
+</html>
