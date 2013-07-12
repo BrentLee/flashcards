@@ -17,11 +17,27 @@
 			<p>+ Add a new deck</p>
 		</div>
 		{{#each deck in controller}}
-		<div class="deck">
-			{{deck.title}}
-		</div>
+			{{#linkTo "deck" deck class="deck"}}{{deck.title}}{{/linkTo}}
 		{{/each}}
-	
+		<div>
+			{{outlet}}
+		</div>
+	</script>
+
+	<script type="text/x-handlebars" data-template-name="deck">
+		<h2>{{title}} Deck</h2>
+		{{#each card in cards}}
+			<div class="flip-container" ontouchstart="this.classList.toggle('hover');" style="margin-bottom: 30px;">
+        		<div class="flipper">
+            		<div class="front" style="background: blue;">
+              			<h1>{{card.question}}</h1>
+            		</div>
+            		<div class="back" style="background: red">
+              			<h2>{{card.answer}}</h2>
+            		</div>
+        		</div>
+			</div>
+		{{/each}}
 	</script>
 
 	<script src="js/libs/jquery-1.9.1.js"></script>

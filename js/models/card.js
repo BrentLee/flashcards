@@ -5,55 +5,55 @@ App.Card = DS.Model.extend({
 
 });
 
-App.Store.FIXTURES = [
+App.Card.FIXTURES = [
 	{
 		id: 100,
-		question: '',
-		answer: ''
+		question: 'Har har',
+		answer: 'youll never know!'
 	},
 	{
 		id: 101,
-		question: '',
-		answer: ''
+		question: 'Perhaps another question?',
+		answer: 'Ah yes! I shall answer it!'
 	},
 	{
 		id: 102,
-		question: '',
-		answer: ''
+		question: 'Not again!',
+		answer: 'Yes.'
 	},
 	{
 		id: 200,
-		question: '',
-		answer: ''
+		question: 'How much wood...',
+		answer: 'Not that again :('
 	},
 	{
 		id: 201,
-		question: '',
-		answer: ''
+		question: 'Marco!',
+		answer: 'Polo!'
 	},
 	{
 		id: 202,
-		question: '',
-		answer: ''
+		question: 'Magellan?',
+		answer: 'No, Mapquest.'
 	},
 	{
 		id: 203,
-		question: '',
-		answer: ''
+		question: 'Thrid times the charm...Right?',
+		answer: 'Well, not exactly.'
 	},
 	{
 		id: 300,
-		question: '',
-		answer: ''
+		question: 'A little tired of this now?',
+		answer: 'Nah. Im just getting warmed up!'
 	},
 	{
 		id: 301,
-		question: '',
-		answer: ''
+		question: 'One potato?',
+		answer: 'Sure. With chili please.'
 	},
 	{
 		id: 302,
-		question: '',
-		answer: ''
+		question: 'Yes. Finally the end.',
+		answer: 'there are no endings, only new beginnings.'
 	}
 ];

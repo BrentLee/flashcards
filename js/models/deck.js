@@ -1,18 +1,22 @@
 App.Deck = DS.Model.extend({
-	title: DS.attr('string')
+	title: DS.attr('string'),
+	cards: DS.hasMany('App.Card')
 });
 
 App.Deck.FIXTURES = [
 	{
 		id: 1,
-		title: 'C#'
+		title: 'C#',
+		cards: [100,101,102]
 	},
 	{
 		id: 2,
-		title: 'Physics'
+		title: 'Physics',
+		cards: [200,201,202,203]
 	},
 	{
 		id: 3,
-		title: 'Java'
+		title: 'Java',
+		cards: [300,301,302]
 	}
 ];
