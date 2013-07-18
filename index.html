@@ -1,8 +1,7 @@
 <html>
 <head>
 	<title>Ember Flashcards</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/bootstrap-responsive.css">
+	<link rel="stylesheet" href="css/foundation.css">
 	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/flip.css">
 </head>
@@ -19,13 +18,15 @@
 		{{#each deck in controller}}
 			{{#linkTo "deck" deck class="deck"}}{{deck.title}}{{/linkTo}}
 		{{/each}}
-		<div>
+		<div class="cards">
 			{{outlet}}
 		</div>
 	</script>
 
 	<script type="text/x-handlebars" data-template-name="deck">
 		<h2>{{title}} Deck</h2>
+		<button>Right</button>
+		<button>Wrong</button>
 		{{#each card in cards}}
 			<div class="flip-container" ontouchstart="this.classList.toggle('hover');" style="margin-bottom: 30px;">
         		<div class="flipper">
