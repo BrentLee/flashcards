@@ -25,9 +25,10 @@
 
 	<script type="text/x-handlebars" data-template-name="deck">
 		<h2>{{title}} Deck</h2>
-		<button>Right</button>
-		<button>Wrong</button>
 		{{#each card in cards}}
+		{{controller}}
+		<button {{action "rightAnswer" card.id}}>Right</button>
+		<button {{action "wrongAnswer" card.id}}>Wrong</button>
 			<div class="flip-container" ontouchstart="this.classList.toggle('hover');" style="margin-bottom: 30px;">
         		<div class="flipper">
             		<div class="front" style="background: blue;">
@@ -52,5 +53,6 @@
 	<script src="js/models/store.js"></script>
 	<script src="js/models/deck.js"></script>
 	<script src="js/models/card.js"></script>
+	<script src="js/controllers/deck_controller.js"></script>
 </body>
 </html>
