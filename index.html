@@ -12,23 +12,27 @@
 	</script>
 
 	<script type="text/x-handlebars" data-template-name="decks">
-		<div class="deck">
+	<div class="row">
+	<div class="large-4 columns">
+	<h2>Decks</h2>
+		<div {{action "createDeck"}} class="deck">
 			<p>+ Add a new deck</p>
 		</div>
 		{{#each deck in controller}}
-			{{#linkTo "deck" deck class="deck"}}{{deck.title}}{{/linkTo}}
+			{{#linkTo "deck" deck}}<div class="deck">{{deck.title}}</div>{{/linkTo}}
 		{{/each}}
-		<div class="cards">
+		
+		</div>
+		<div class="large-8 columns">
 			{{outlet}}
+		</div>
 		</div>
 	</script>
 
 	<script type="text/x-handlebars" data-template-name="deck">
+	
 		<h2>{{title}} Deck</h2>
 		{{#each card in cards}}
-		{{controller}}
-		<button {{action "rightAnswer" card.id}}>Right</button>
-		<button {{action "wrongAnswer" card.id}}>Wrong</button>
 			<div class="flip-container" ontouchstart="this.classList.toggle('hover');" style="margin-bottom: 30px;">
         		<div class="flipper">
             		<div class="front" style="background: blue;">
@@ -39,6 +43,8 @@
             		</div>
         		</div>
 			</div>
+			<button {{action "rightAnswer" card.id}}>Right</button>
+		<button {{action "wrongAnswer" card.id}}>Wrong</button>
 		{{/each}}
 	</script>
 
@@ -54,5 +60,7 @@
 	<script src="js/models/deck.js"></script>
 	<script src="js/models/card.js"></script>
 	<script src="js/controllers/deck_controller.js"></script>
+	<script src="js/controllers/decks_controller.js"></script>
+
 </body>
 </html>

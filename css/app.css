@@ -10,3 +10,15 @@
 	background-color: grey;
 	color: white;
 }
+
+.decks{
+	float: left;
+}
+
+.cards{
+	float: right;
+}
+
+.cards-container{
+
+}
