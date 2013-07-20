@@ -23,3 +23,18 @@
 .cards-container{
 
 }
+
+.top-bar a{
+	color: white;
+}
+
+.button-container{
+}
+
+.right-button{
+	margin-left: 135px;
+}
+
+.wrong-button{
+	margin-left: 30px;
+}

@@ -8,8 +8,15 @@
 </head>
 <body>
 	<script type="text/x-handlebars" data-template-name="application">
-		<h1>Flashcards</h1>
+			<nav class="top-bar">
+				<ul class="title-area">
+					<li class="name">
+						<a href="/"><h1 style="color: white;">Ember-Flashcards</h1></a>
+					</li>
+				</ul>
+			</nav>
 		{{outlet}}
+		
 	</script>
 
 	<script type="text/x-handlebars" data-template-name="decks">
@@ -34,7 +41,7 @@
 	
 		<h2>{{title}} Deck</h2>
 		{{#each card in cards}}
-			<div class="flip-container" ontouchstart="this.classList.toggle('hover');" style="margin-bottom: 30px;">
+			<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
         		<div class="flipper">
             		<div class="front">
               			<h1>{{card.question}}</h1>
@@ -44,8 +51,10 @@
             		</div>
         		</div>
 			</div>
-			<button {{action "rightAnswer" card.id}}>Right</button>
-		<button {{action "wrongAnswer" card.id}}>Wrong</button>
+			<div class="button-container">
+			<button {{action "rightAnswer" card.id}} class="right-button">Right</button>
+		<button {{action "wrongAnswer" card.id}} class="wrong-button">Wrong</button>
+		</div>
 		{{/each}}
 	</script>
 
