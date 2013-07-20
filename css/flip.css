@@ -42,6 +42,9 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    border: 1px solid black;
+    padding: 5px 30px;
 }
 
 .back {
@@ -50,6 +53,7 @@
     -o-transform: rotateY(-180deg);
     -ms-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
+    background-color: red;
 }
 
 .flip-container:hover .back, .flip-container.hover .back {

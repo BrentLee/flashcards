@@ -16,7 +16,8 @@
 }
 
 .cards{
-	float: right;
+	border-left: 1px solid black;
+	padding-left: 30px;
 }
 
 .cards-container{
