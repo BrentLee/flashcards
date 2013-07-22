@@ -1,0 +1,16 @@
+<script type="text/x-handlebars" data-template-name="decks">
+    <div class="row">
+    	<div class="large-4 columns">
+    	    <h2>Decks</h2>
+    		<div {{action "createDeck"}} class="deck">
+    			<p>+ Add a new deck</p>
+    		</div>
+    		{{#each deck in controller}}
+    			{{#linkTo "deck" deck}}<div class="deck">{{deck.title}}</div>{{/linkTo}}
+    		{{/each}}
+    	</div>
+		<div class="large-8 columns cards">
+			{{outlet}}
+		</div>
+	</div>
+</script>
