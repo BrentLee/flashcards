@@ -1,1 +1,5 @@
-var App = Ember.Application.create();
+(function(){
+
+	window.App = Ember.Application.create();
+
+}());
