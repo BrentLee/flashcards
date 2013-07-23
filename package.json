@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-ember-templates": "~0.4.10",
-    "grunt-contrib-concat": "~0.3.0"
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-ember-templates": "~0.4.10"
   }
 }

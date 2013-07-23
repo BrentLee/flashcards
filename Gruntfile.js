@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 
         concat: {
             js: {
-                src: ['js/application.js', 'js/router.js', 'js/**/*.js'],
+                src: ['js/app.js', 'js/router.js', 'js/**/*.js'],
                 dest: 'build/<%= pkg.name %>.js'
             }
         },
@@ -23,9 +23,10 @@ module.exports = function(grunt) {
             }
         }
     });
-}                  
-    
+
     grunt.loadNpmTasks('grunt-ember-templates');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    
+
     grunt.registerTask('default', ['concat', 'emberTemplates']);
+}                  
+    
