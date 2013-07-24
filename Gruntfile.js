@@ -21,12 +21,20 @@ module.exports = function(grunt) {
                     'build/<%= pkg.name %>.templates.js': ['templates/**/*.hbs']
                 }
             }
+        },
+        
+        watch: {
+            default: {
+                files: ["js/**/*.js", "templates/**/*.hbs", "css/*.css"],
+                tasks: ["default"]
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-ember-templates');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['concat', 'emberTemplates']);
+    grunt.registerTask('default', ['concat', 'emberTemplates', 'watch']);
 }                  
     
