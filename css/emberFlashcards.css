@@ -1,0 +1,38 @@
+/* line 1, emberFlashcards.scss */
+html, body {
+  height: 100%; }
+
+/* line 5, emberFlashcards.scss */
+body {
+  overflow: scroll;
+  background-color: #ebb91c; }
+
+/* line 12, emberFlashcards.scss */
+.ember-application > .ember-view {
+  height: 100%; }
+
+/* line 18, emberFlashcards.scss */
+.container {
+  background-color: #ffffff;
+  border-left: 1px solid lightgrey;
+  border-right: 1px solid lightgrey; }
+
+/* line 24, emberFlashcards.scss */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -131px; }
+
+/* line 30, emberFlashcards.scss */
+#push {
+  height: 131px; }
+
+/* line 34, emberFlashcards.scss */
+.footer {
+  border-top: 1px solid darkgrey;
+  color: #ffffff;
+  background-color: #353334;
+  text-align: center;
+  height: 100px;
+  padding-top: 30px; }

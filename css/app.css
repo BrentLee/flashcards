@@ -1,14 +1,15 @@
 .deck{
-	border: solid 1px black;
+	border: solid 1px darkgrey;
 	width: 250px;
 	height: 150px;
 	margin: 10px;
 	padding: 5px;
+	background-color: white;
 }
 
 .deck:hover{
-	background-color: grey;
-	color: white;
+	background-color: #EEEEEE;
+	color: #999999;
 }
 
 .decks{
@@ -37,8 +38,4 @@
 
 .wrong-button{
 	margin-left: 30px;
-}
-
-.foote{
-	background-color: lightgrey;
 }

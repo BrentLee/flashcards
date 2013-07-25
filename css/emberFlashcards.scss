@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+}
+  
+body {
+    overflow: scroll;
+    background-color: #ebb91c;
+}
+
+.ember-application{
+
+	> .ember-view{
+		height: 100%;
+	}
+}
+
+
+.container{
+	background-color: #ffffff;
+	border-left: 1px solid lightgrey;
+	border-right: 1px solid lightgrey;
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -131px;
+}
+#push {
+    height: 131px;
+}
+
+.footer{
+	border-top: 1px solid darkgrey;
+	color: #ffffff;
+	background-color: #353334;
+	text-align: center;
+	height: 100px;
+	padding-top: 30px;
+}
+
+
+

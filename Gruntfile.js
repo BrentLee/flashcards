@@ -25,8 +25,20 @@ module.exports = function(grunt) {
         
         watch: {
             default: {
-                files: ["js/**/*.js", "templates/**/*.hbs", "css/*.css"],
+                files: ["js/**/*.js", "templates/**/*.hbs", "css/*.css", "css/*.scss"],
                 tasks: ["default"]
+            }
+        },
+
+        sass:{
+            default: {
+
+                options: {
+                    lineNumbers: true
+                },
+                files: {
+                    "css/emberFlashcards.css": ["css/emberFlashcards.scss"]
+                }
             }
         }
     });
@@ -34,7 +46,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-ember-templates');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-sass');
 
-    grunt.registerTask('default', ['concat', 'emberTemplates', 'watch']);
+    grunt.registerTask('default', ['concat', 'emberTemplates', 'sass', 'watch']);
 }                  
     

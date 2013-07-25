@@ -1,20 +1,24 @@
-<nav class="top-bar">
-	<ul class="title-area">
-		<li class="name">
-			<a href="/"><h1 style="color: white;">Ember-Flashcards</h1></a>
-		</li>
-	</ul>
-	<ul class="right">
-		<li class="divider"></li>
-		<li class>
-			{{#linkTo "about"}}about{{/linkTo}}
-		</li>
-	</ul>
-</nav>
-<div class="container">
-	{{outlet}}	
+<div id="wrap">
+	<div class="container">
+		<nav class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<a class="brand" href="#">Ember-Flashcards</a>
+				<ul class="nav">
+					<li class="divider-vertical"></li>
+					<li><a href="#">sign in</a></li>
+					<li><a href="#">create account</a></li>
+					<li>
+						{{#linkTo "about"}}about{{/linkTo}}
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="container">
+		{{outlet}}	
+	</div>
+	<div id="push"></div>
 </div>
-
 <footer class="footer">
     &copy; Brent Lee, {{currentYear}}
 </footer>
