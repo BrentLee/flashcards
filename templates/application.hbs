@@ -4,5 +4,17 @@
 			<a href="/"><h1 style="color: white;">Ember-Flashcards</h1></a>
 		</li>
 	</ul>
+	<ul class="right">
+		<li class="divider"></li>
+		<li class>
+			{{#linkTo "about"}}about{{/linkTo}}
+		</li>
+	</ul>
 </nav>
-{{outlet}}
+<div class="container">
+	{{outlet}}	
+</div>
+
+<footer class="footer">
+    &copy; Brent Lee, {{currentYear}}
+</footer>
