@@ -1,14 +1,14 @@
 <div class="row">
-	<div class="span4">
+	<div class="span4 decks">
 	    <h2>Decks </h2>
-		<div {{action "createDeck"}} class="deck">
-			<p>+ Add a new deck</p>
-		</div>
+		{{#linkTo "decks.createDeck"}}<div class="deck">+ Add a new deck</div>{{/linkTo}}
+			
+		
 		{{#each deck in controller}}
 			{{#linkTo "deck" deck}}<div class="deck">{{deck.title}}</div>{{/linkTo}}
 		{{/each}}
 	</div>
-	<div class="span8 cards">
+	<div class="span8">
 		{{outlet}}
 	</div>
 </div>

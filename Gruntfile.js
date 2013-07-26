@@ -14,7 +14,7 @@ module.exports = function(grunt) {
             compile: {
                 options: {
                     templateName: function(sourceFile){
-                        return sourceFile.replace(/templates\//, '');
+                        return sourceFile.replace(/templates\//, '').replace('_', '/');
                     }
                 },
                 files: {

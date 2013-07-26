@@ -4,7 +4,6 @@ html, body {
   
 body {
     overflow: scroll;
-    background-color: #ebb91c;
 }
 
 .ember-application{
@@ -12,13 +11,6 @@ body {
 	> .ember-view{
 		height: 100%;
 	}
-}
-
-
-.container{
-	background-color: #ffffff;
-	border-left: 1px solid lightgrey;
-	border-right: 1px solid lightgrey;
 }
 
 #wrap {
@@ -33,12 +25,12 @@ body {
 
 .footer{
 	border-top: 1px solid darkgrey;
-	color: #ffffff;
-	background-color: #353334;
 	text-align: center;
 	height: 100px;
 	padding-top: 30px;
 }
 
-
-
+.card{
+	width: 500px;
+	height: 300px;
+}
