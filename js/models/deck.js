@@ -6,7 +6,7 @@
 
 	App.Deck.FIXTURES = [
 		{
-			id: 1,
+			id: 99,
 			title: 'C#',
 			cards: [100,101,102]
 		},

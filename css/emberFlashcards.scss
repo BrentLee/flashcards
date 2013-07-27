@@ -6,6 +6,16 @@ body {
     overflow: scroll;
 }
 
+button{
+	border: 1px solid darkgrey;
+	background-color: lightgrey;
+	padding: 5px 10px;
+
+	&:hover {
+		background-color: white;
+	}
+}
+
 .ember-application{
 
 	> .ember-view{
@@ -33,4 +43,23 @@ body {
 .card{
 	width: 500px;
 	height: 300px;
+}
+
+.icon-pencil{
+	display: none;
+	background: url('../img/glyphicons-halflings.png') no repeat -96px -72px !important;
+	float: right;
+}
+
+.icon-search{
+	background: url('../img/glyphicons-halflings.png') no repeat -96px -72px !important;
+	float: right;
+}
+
+.deck{
+	&:hover{
+		.icon-pencil{
+			display: block;
+		}
+	}
 }
