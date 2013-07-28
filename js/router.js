@@ -6,7 +6,9 @@
 		this.resource('decks', function(){
 			this.route('createDeck');
 
-			this.resource('deck', {path:":deck_id"});
+			this.resource('deck', {path:":deck_id"}, function(){
+				this.route('editDeck', {path: "/editDeck"});
+			});
 		});
 	});
 }(window.App = window.App || {}));
