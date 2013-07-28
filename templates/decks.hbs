@@ -1,14 +1,20 @@
 <div class="row">
 	<div class="span4 decks">
 	    <h2>Decks </h2>
+	    <div class="deck-container">
 		{{#linkTo "decks.createDeck"}}<div class="deck">+ Add a new deck</div>{{/linkTo}}
-		
+	</div>
 		{{#each deck in controller}}
+			<div class="deck-container">
 			{{#linkTo "deck" deck}}
-				<div class="deck">{{deck.title}}
-					<i class="icon-pencil"></i>
+				<div class="deck">
+					{{deck.title}}
 				</div>
 			{{/linkTo}}
+			<div class="deck-edit-link">
+			{{#linkTo "deck.editDeck" deck}}<i class="icon-pencil"></i>{{/linkTo}}
+		</div>
+			</div>
 			
 		{{/each}}
 	</div>

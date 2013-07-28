@@ -46,9 +46,10 @@ button{
 }
 
 .icon-pencil{
-	display: none;
 	background: url('../img/glyphicons-halflings.png') no repeat -96px -72px !important;
+	margin-top: -175px;
 	float: right;
+	display: none;
 }
 
 .icon-search{
@@ -57,9 +58,31 @@ button{
 }
 
 .deck{
-	&:hover{
-		.icon-pencil{
-			display: block;
-		}
+	border: solid 1px darkgrey;
+	width: 250px;
+	height: 175px;
+	padding: 0;
+	background-color: white;
+}
+
+.deck-container{
+	max-width: 250px;
+	max-height: 175px;
+	padding: 10px;
+
+	> a{
+		margin: 0;
+		padding: 0;
 	}
+}
+
+.deck:hover{
+	background-color: #EEEEEE;
+	color: #999999;
+}
+
+.deck-container:hover{
+	.icon-pencil{
+		display: block;
+	}	
 }
