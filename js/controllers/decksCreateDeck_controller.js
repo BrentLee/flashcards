@@ -7,11 +7,10 @@
 			var deck = App.Deck.createRecord({
 				title: title
 			});
-			
 
 			this.set('newDeckTitle', '');
 			deck.save();
-			this.transitionToRoute('deck.editDeck', deck);
+			this.transitionToRoute('decks.editDeck', deck);
 		}
 	});
 }(window.App = window.App || {}));

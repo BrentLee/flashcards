@@ -1,6 +1,8 @@
 (function(){
 
-	window.App = Ember.Application.create();
+	window.App = Ember.Application.create({
+    LOG_TRANSITIONS: true
+  });
 
 	$(document).ready(function() {
   $('.editable').hallo({
