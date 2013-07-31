@@ -1,1 +1,14 @@
 <h1>Create Account</h1>
+<form {{action "createAccount" on="submit" class="new-account"}}>
+	{{view Ember.TextField placeholder="first name" id="new-first-name" valueBinding="newFirstName"}}
+
+	{{view Ember.TextField placeholder="last name" id="new-last-name" valueBinding="newLastName"}}
+
+	{{view Ember.TextField placeholder="email" id="new-email" valueBinding="newEmail"}}
+
+	{{view Ember.TextField placeholder="password" id="new-password" type="password" valueBinding="newPassword"}}
+
+	{{view Ember.TextField placeholder="confirm password" id="new-confirm-password" type="password" valueBinding="new-confirm-password"}}
+
+	<button>create</button>
+</form>

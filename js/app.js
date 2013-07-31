@@ -7,11 +7,13 @@
 	$(document).ready(function() {
   $('.editable').hallo({
     plugins: {
-      'halloformat': {},
+      'halloformat': {"bold": true, "italic": true, "strikethrough": true, "underline": true},
+      'halloheadings': [1,2,3],
       'halloblock': {},
       'hallojustify': {},
-      'hallolists': {},
-      'halloreundo': {}
+      'hallolists': {"ordered": true, "unordered": true},
+      'halloreundo': {},
+      'halloimage': {}
     }
   });
 });

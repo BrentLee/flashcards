@@ -43,10 +43,10 @@ button{
 .card{
 	width: 500px;
 	height: 300px;
+	border: 1px solid darkgrey;
 }
 
-.icon-pencil{
-	background: url('../img/glyphicons-halflings.png') no repeat -96px -72px !important;
+.deck-edit-link{
 	margin-top: -175px;
 	float: right;
 	display: none;
@@ -82,7 +82,7 @@ button{
 }
 
 .deck-container:hover{
-	.icon-pencil{
+	.deck-edit-link{
 		display: block;
 	}	
 }
