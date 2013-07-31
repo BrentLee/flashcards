@@ -1,4 +1,7 @@
+
 <h1>Create Account</h1>
+<div class="row">
+	<div class="span4">
 <form {{action "createAccount" on="submit" class="new-account"}}>
 	{{view Ember.TextField placeholder="first name" id="new-first-name" valueBinding="newFirstName"}}
 
@@ -12,3 +15,5 @@
 
 	<button>create</button>
 </form>
+</div>
+</div>
