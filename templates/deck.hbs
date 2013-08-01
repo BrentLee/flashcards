@@ -1,20 +1,19 @@
 <h2>{{title}} Deck</h2>
-{{#each card in cards}}
 	<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 		<div class="flipper">
     		<div class="front">
-      			<h1>{{card.question}}</h1>
+      			<h1>{{currentCard.question}}</h1>
     		</div>
     		<div class="back">
-      			<h2>{{card.answer}}</h2>
+      			<h2>{{currentCard.answer}}</h2>
     		</div>
 		</div>
 	</div>
 	<div class="button-container">
-	<button {{action "rightAnswer" card.id}} class="right-button">Right</button>
-    <button {{action "wrongAnswer" card.id}} class="wrong-button">Wrong</button>
+    <button {{action "previousCard"}} class="previous-button"><i class="ui-icon icon-arrowthick-1-w"></i></button>
+    <button class="flip-button">flip</button>
+    <button {{action "nextCard"}} class="next-button"><i class="ui-icon icon-arrowthick-1-e"></i></button>
 </div>
-{{/each}}
 <div class="progress">
   <div class="bar" style="width: 60%;"></div>
 </div>

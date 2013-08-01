@@ -5,17 +5,25 @@
   });
 
 	$(document).ready(function() {
-  $('.editable').hallo({
-    plugins: {
-      'halloformat': {"bold": true, "italic": true, "strikethrough": true, "underline": true},
-      'halloheadings': [1,2,3],
-      'halloblock': {},
-      'hallojustify': {},
-      'hallolists': {"ordered": true, "unordered": true},
-      'halloreundo': {},
-      'halloimage': {}
-    }
-  });
+    $('.editable').hallo({
+      plugins: {
+        'halloformat': {"bold": true, "italic": true, "strikethrough": true, "underline": true},
+        'halloheadings': [1,2,3],
+        'halloblock': {},
+        'hallojustify': {},
+        'hallolists': {"ordered": true, "unordered": true},
+        'halloreundo': {},
+        'halloimage': {}
+      }
+    });
+
+   $('#currentCard').on('click', function(){
+      $('#currentCard').classList.toggle('flip');
+   });
+
+   $('#flipButton').on('click', function(){
+      $('#currentCard').classList.toggle('flip');
+   });
 });
 
 }());
