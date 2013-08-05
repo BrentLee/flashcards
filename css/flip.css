@@ -57,21 +57,13 @@
     background-color: red;
 }
 
-.flip-container:hover .back, .flip-container.hover .back {
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-}
-
-.flip-container:hover .front, .flip-container.hover .front {
+#flip-toggle.flip .flipper {
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
+    filter: FlipH;
+    -ms-filter: "FlipH";
 }
-
 
 .front {
     z-index: 2;

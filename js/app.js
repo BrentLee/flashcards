@@ -17,13 +17,9 @@
       }
     });
 
-   $('#currentCard').on('click', function(){
-      $('#currentCard').classList.toggle('flip');
-   });
-
-   $('#flipButton').on('click', function(){
-      $('#currentCard').classList.toggle('flip');
-   });
+    $('#clickMe').on('click', function(){
+      alert('in hurr');
+    });
 });
 
 }());
