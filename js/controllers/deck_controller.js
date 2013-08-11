@@ -9,17 +9,21 @@
 		nextCard: function(index){
 			var card = this.model.get('cards').nextObject(index++);
 			this.set('currentCard', card);
+			this.set('currentCard.index', index++)
 		},
 
-		previousCard: function(){
+		previousCard: function(index){
 			var card = this.model.get('cards').nextObject(index--);
 			this.set('currentCard', card);
+			this.set('currentCard.index', index--)
 		},
 
 		currentCard: Ember.computed(function(){
 			var cards = this.model.get('cards');
-			return cards.objectAt(this.get('currentIndex'));
-		}).property('currentIndex'),
+			var currentCard = cards.objectAt(this.get('currentIndex'));
+			currentCard.index = this.get('currentIndex');
+			return currentCard;
+		}).property('currentIndex', 'model'),
 
 		rightAnswer: function(id){
 			var card = App.Card.find(id);

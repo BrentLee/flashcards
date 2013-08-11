@@ -18,9 +18,9 @@
       </div>
     </div>
 	<div class="button-container">
-    <button {{action "previousCard"}} class="previous-button"><i class="ui-icon icon-arrowthick-1-w"></i></button>
+    <button {{action "previousCard" currentCard.index}} class="previous-button"><i class="ui-icon icon-arrowthick-1-w"></i></button>
     
-    <button {{action "nextCard" 1}} class="next-button"><i class="ui-icon icon-arrowthick-1-e"></i></button>
+    <button {{action "nextCard" currentCard.index}} class="next-button"><i class="ui-icon icon-arrowthick-1-e"></i></button>
 </div>
 <div class="progress">
   <div class="bar" style="width: 60%;"></div>
