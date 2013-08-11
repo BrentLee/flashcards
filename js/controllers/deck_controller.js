@@ -1,7 +1,6 @@
 (function(App){
 	App.DeckController = Ember.ObjectController.extend({
-		model: function(selected){
-			alert(selected);
+		model: function(){
 			return this.get('model');
 		},
 		
