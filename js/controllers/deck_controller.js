@@ -1,18 +1,26 @@
 (function(App){
 	App.DeckController = Ember.ObjectController.extend({
 		currentIndex: 0,
-		
+
 		nextCard: function() {
-            var currentIndex = this.incrementProperty('currentIndex');
+			var currentIndex = this.get('currentIndex');
+			var cards = this.get('model.cards');
+			var length = cards.get('length');
+			if(currentIndex + 1 < length){
+				this.incrementProperty('currentIndex');
+			}
         },
 
         previousCard: function() {
-            var currentIndex = this.decrementProperty('currentIndex');
+        	var currentIndex = this.get('currentIndex');
+        	if(currentIndex - 1 >= 0){
+            	this.decrementProperty('currentIndex');
+            }
         },
 
         currentCard: Ember.computed(function() {
             var currentIndex = this.get('currentIndex');
-            var cards = this.get("model.cards");
+            var cards = this.get('model.cards');
             return cards.objectAt(currentIndex);
         }).property('currentIndex'),
 
