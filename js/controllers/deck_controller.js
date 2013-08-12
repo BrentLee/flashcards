@@ -1,32 +1,20 @@
 (function(App){
 	App.DeckController = Ember.ObjectController.extend({
-		model: function(){
-			alert('in model');
-			return this.get('model');
-		},
+		currentIndex: 0,
 		
-		nextCard: function(index){
-			var tempIndex = index+1;
-			alert('tempIndex= '+ tempIndex);
-			var card = this.model.get('cards').nextObject(tempIndex);
-			card.index = tempIndex;
-			this.set('currentCard', card);
-		},
+		nextCard: function() {
+            var currentIndex = this.incrementProperty('currentIndex');
+        },
 
-		previousCard: function(index){
-			var tempIndex = index - 1;
-			alert('tempIndex= '+ tempIndex);
-			var card = this.model.get('cards').nextObject(tempIndex);
-			card.index = tempIndex;
-			this.set('currentCard', card);
-		},
+        previousCard: function() {
+            var currentIndex = this.decrementProperty('currentIndex');
+        },
 
-		currentCard: Ember.computed(function(){
-			var cards = this.model.get('cards');
-			var currentCard = cards.objectAt(0);
-			currentCard.index = 0;
-			return currentCard;
-		}).property('model'),
+        currentCard: Ember.computed(function() {
+            var currentIndex = this.get('currentIndex');
+            var cards = this.get("model.cards");
+            return cards.objectAt(currentIndex);
+        }).property('currentIndex'),
 
 		rightAnswer: function(id){
 			var card = App.Card.find(id);
