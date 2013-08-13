@@ -6,13 +6,13 @@
 	</div>
 		{{#each deck in controller}}
 			<div class="deck-container">
-			{{#linkTo "deck" deck}}
+			{{#linkTo "decks.deck" deck}}
 				<div class="deck">
 					{{deck.title}}
 				</div>
 			{{/linkTo}}
 			<div class="deck-edit-link">
-			{{#linkTo "decks.editDeck" deck}}<i class="icon-pencil"></i>{{/linkTo}}
+			{{#linkTo "deck" deck}}<i class="icon-pencil"></i>{{/linkTo}}
 		</div>
 			</div>
 			
