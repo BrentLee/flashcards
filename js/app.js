@@ -16,10 +16,6 @@
         'halloimage': {}
       }
     });
-
-    $('#clickMe').on('click', function(){
-      alert('in hurr');
-    });
-});
+  });
 
 }());

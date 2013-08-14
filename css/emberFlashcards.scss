@@ -49,9 +49,9 @@ button{
 }
 
 .card-edit-link{
-		float: right;
-		margin-top: -150px;
-	}
+	float: right;
+	margin-top: -150px;
+}
 
 
 
@@ -60,7 +60,7 @@ button{
 	float: right;
 }
 
-.deck{
+.small-preview{
 	border: solid 1px darkgrey;
 	width: 250px;
 	height: 175px;
@@ -75,7 +75,7 @@ button{
 		display: none;
 	}
 
-.deck-container{
+.preview-container{
 	max-width: 250px;
 	max-height: 175px;
 	padding: 10px;
@@ -86,12 +86,12 @@ button{
 	}
 }
 
-.deck:hover{
+.small-preview:hover{
 	background-color: #EEEEEE;
 	color: #999999;
 }
 
-.deck-container:hover{
+.preview-container:hover{
 	.deck-edit-link{
 		display: block;
 	}	
@@ -119,10 +119,6 @@ button{
   background-color: lightgrey;
 }
 
-.card-preview{
-	border: solid 1px darkgrey;
-	width: 250px;
-	height: 175px;
-	padding: 0;
-	background-color: white;
+.card-edit{
+	margin-bottom: 20px;
 }

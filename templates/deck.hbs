@@ -2,21 +2,15 @@
 	<div class="span4 cards">
 	    <h2>Cards</h2>
 	    {{#linkTo "decks"}}Back to Decks{{/linkTo}}
-	    <div class="card-container">
-	    	{{model}}
-		{{#linkTo "deck.addCard" model}}<div class="deck">+ Add a new card</div>{{/linkTo}}
-	</div>
-		{{#each card in cards}}
-			<div class="card-container">
-			{{#linkTo "deck.card" card}}
-				<div class="card-preview">
-					{{card.question}}
-				</div>
-			{{/linkTo}}
-			<div class="card-edit-link">
+	    <div class="preview-container">
+			{{#linkTo "deck.addCard" model}}<div class="small-preview">+ Add a new card</div>{{/linkTo}}
 		</div>
+		{{#each card in cards}}
+			<div class="preview-container">
+				{{#linkTo "deck.card" card}}
+					<div class="small-preview">{{card.question}}</div>
+				{{/linkTo}}
 			</div>
-			
 		{{/each}}
 	</div>
 
