@@ -2,6 +2,13 @@
 	App.DecksDeckController = Ember.ObjectController.extend({
 		currentIndex: 0,
 
+		currentProgress: Ember.computed(function(){
+			var currentIndex = this.get('currentIndex') + 1;
+			var cards = this.get('model.cards');
+			var progress =  (currentIndex / cards.get('length')) * 100;
+			return '<div class="bar" style="width: '+progress+'%;"></div>'
+		}).property('currentIndex'),
+
 		nextCard: function() {
 			var currentIndex = this.get('currentIndex');
 			var cards = this.get('model.cards');
