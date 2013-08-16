@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 
         concat: {
             js: {
-                src: ['js/app.js', 'js/router.js', 'js/routes/decks_route.js', 'js/**/*.js'],
+                src: ['src/app.js', 'src/router.js', 'src/routes/decks_route.js', 'src/**/*.js'],
                 dest: 'build/<%= pkg.name %>.js'
             }
         },
@@ -14,18 +14,18 @@ module.exports = function(grunt) {
             compile: {
                 options: {
                     templateName: function(sourceFile){
-                        return sourceFile.replace(/templates\//, '').replace('_', '/');
+                        return sourceFile.replace(/src\/templates\//, '').replace('_', '/');
                     }
                 },
                 files: {
-                    'build/<%= pkg.name %>.templates.js': ['templates/**/*.hbs']
+                    'build/<%= pkg.name %>.templates.js': ['src/templates/**/*.hbs']
                 }
             }
         },
         
         watch: {
             default: {
-                files: ["js/**/*.js", "templates/**/*.hbs", "css/*.css", "css/*.scss"],
+                files: ["src/**/*.js", "src/templates/**/*.hbs", "css/*.scss"],
                 tasks: ["default"]
             }
         },

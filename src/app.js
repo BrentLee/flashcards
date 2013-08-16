@@ -16,6 +16,9 @@
         'halloimage': {}
       }
     });
+    $('#card-front').bind('hallodeactivated', function(){
+      alert('working');
+    });
   });
 
 }());
