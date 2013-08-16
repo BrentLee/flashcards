@@ -3,6 +3,7 @@
 		this.route('about');
 		this.route('signIn');
 		this.route('createAccount');
+		this.route('createAccountEmail');
 		this.resource('deck', {path:"deck/:deck_id"}, function(){
 			this.route('card', {path:"card/:card_id"});
 			this.route('addCard');

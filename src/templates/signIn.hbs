@@ -1,4 +1,5 @@
 <h2>sign in</h2>
+<form {{action "signIn" on="submit" class="sign-in"}}>
 <label for="username">username</label>
 {{view Ember.TextField valueBinding="username" id="username"}}
 
@@ -7,3 +8,7 @@
 
 <label for="rememberMe">remember me</label>
 {{view Ember.Checkbox }}
+
+<button>sign in</button>
+
+</form>
