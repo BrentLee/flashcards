@@ -1,6 +1,6 @@
 (function(App){
 	App.DeckAddCardController = Ember.ObjectController.extend({
-		needs: "deck",
+		needs: 'deck',
 		addCard: function(){
 			var newQuestion = this.get('newQuestion');
 			var newAnswer = this.get('newAnswer');
