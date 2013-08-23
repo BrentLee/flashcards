@@ -10,7 +10,7 @@
 				{{#linkTo "deck.card" card}}
 					<div class="small-preview">{{card.question}}</div>
 				{{/linkTo}}
-				<div {{action "deleteCard"}} class="delete-icon-link">
+				<div {{action "deleteCard" card}} class="delete-icon-link">
 					<i class="glyphicon glyphicon-remove"></i>
 				</div>
 			</div>

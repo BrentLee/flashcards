@@ -1,9 +1,7 @@
-<h2>Add card to {{model}} deck</h2>
+<h2>Add card to {{model.title}} deck</h2>
 <form {{action "addCard" on="submit"}}>
 {{view Ember.TextArea id="new-question" placeholder="enter question here" valueBinding="newQuestion" action="newCard" class="card"}}
 
 {{view Ember.TextArea id="new-answer" placeholder="enter answer here" valueBinding="newAnswer" action="newCard" class="card"}}
 <button type="submit">add card</button>
 </form>
-{{controller}}
-
