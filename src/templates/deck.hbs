@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="span4 cards">
+	<div class="col-md-4 cards">
 	    <h2>Cards</h2>
 	    {{#linkTo "decks"}}Back to Decks{{/linkTo}}
 	    <div class="preview-container">
@@ -10,11 +10,14 @@
 				{{#linkTo "deck.card" card}}
 					<div class="small-preview">{{card.question}}</div>
 				{{/linkTo}}
+				<div {{action "deleteCard"}} class="delete-icon-link">
+					<i class="icon-remove"></i>
+				</div>
 			</div>
 		{{/each}}
 	</div>
 
-	<div class="span8">
+	<div class="col-md-8">
 		{{outlet}}
 	</div>
 </div>

@@ -4,6 +4,7 @@ html, body {
   
 body {
     overflow: scroll;
+    padding-top: 50px;
 }
 
 button{
@@ -29,11 +30,12 @@ button{
     height: 100%;
     margin: 0 auto -131px;
 }
+
 #push {
     height: 131px;
 }
 
-.footer{
+#footer{
 	border-top: 1px solid darkgrey;
 	text-align: center;
 	height: 100px;
@@ -44,20 +46,11 @@ button{
 	width: 500px;
 	height: 300px;
 	border: 1px solid darkgrey;
-
-	
 }
 
 .card-edit-link{
 	float: right;
 	margin-top: -150px;
-}
-
-
-
-.icon-search{
-	background: url('../img/glyphicons-halflings.png') no repeat -96px -72px !important;
-	float: right;
 }
 
 .small-preview{
@@ -66,23 +59,24 @@ button{
 	height: 175px;
 	padding: 0;
 	background-color: white;
-
-	
 }
+
 .deck-edit-link{
-		margin-top: -175px;
-		float: right;
-		display: none;
-	}
+	margin-top: -175px;
+	float: right;
+	display: none;
+}
 
 .preview-container{
 	max-width: 250px;
 	max-height: 175px;
 	padding: 10px;
+	margin-bottom: 20px;
 
 	> a{
 		margin: 0;
 		padding: 0;
+		text-decoration: none;
 	}
 }
 
@@ -94,14 +88,15 @@ button{
 .preview-container:hover{
 	.deck-edit-link{
 		display: block;
-	}	
+	}
+
+	.delete-icon-link{
+		display: block;
+	}
 }
 
 .top-bar a{
 	color: white;
-}
-
-.button-container{
 }
 
 .right-button{
@@ -114,11 +109,18 @@ button{
 
 .temp{
 	width: 100px;
-  height: 25px;
-  border: 1px solid black;
-  background-color: lightgrey;
+	height: 25px;
+	border: 1px solid black;
+	background-color: lightgrey;
 }
 
 .card-edit{
 	margin-bottom: 20px;
+}
+
+.delete-icon-link{
+	cursor: pointer;
+	margin-top: -20px;
+	float: right;
+	display: none;
 }
