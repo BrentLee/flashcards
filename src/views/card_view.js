@@ -5,7 +5,7 @@
 		attributeBindings: ['newQuestion', 'newAnswer'],
 
 		doubleClick: function(){
-			$('.editable').hallo({editable: true});
+			document.querySelector("#flip-toggle").classList.toggle("flip");
 		},
 		didInsertElement: function(){
 			$('.editable').hallo({
