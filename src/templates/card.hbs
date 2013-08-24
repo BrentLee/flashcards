@@ -1,0 +1,8 @@
+<div class="front card editable" contenteditable="true">
+  <div class="decks-card-edit-link"><i {{action "activateHallo"}} class="glyphicon glyphicon-pencil"></i></div>
+  <span id="question-content" valueBinding="newQuestion">{{currentCard.question}}</span>
+</div>
+<div class="back card editable" contenteditable="true">
+  <div class="decks-card-edit-link"><i {{action "activateHallo"}} class="glyphicon glyphicon-pencil"></i></div>
+  <span id="answer-content" valueBinding="newAnswer">{{currentCard.answer}}</span>
+</div>

@@ -1,12 +1,12 @@
 (function(App){
-	App.DecksDeckController = Ember.ObjectController.extend({
+	App.DecksDeckController = Ember.ObjectController.extend(Ember.Evented, {
 		currentIndex: 0,
 
 		currentProgress: Ember.computed(function(){
 			var currentIndex = this.get('currentIndex') + 1;
 			var cards = this.get('model.cards');
 			var progress =  (currentIndex / cards.get('length')) * 100;
-			return '<div class="bar" style="width: '+progress+'%;"></div>'
+			return 'width: '+progress+'%;';
 		}).property('currentIndex'),
 
 		nextCard: function() {
@@ -30,6 +30,10 @@
             var cards = this.get('model.cards');
             return cards.objectAt(currentIndex);
         }).property('currentIndex'),
+
+        activateHallo: function(){
+			$('.editable').hallo({editable: true});
+		},
 
 		rightAnswer: function(id){
 			var card = App.Card.find(id);
