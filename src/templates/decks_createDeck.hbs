@@ -1,7 +1,12 @@
 <h2>Create deck</h2>
-
-<label for="title"><strong>title: </strong></label>
-{{view Ember.TextField valueBinding="newTitle" id="title"}}
-<label for="description"><strong>description: </strong></label>
-{{view Ember.TextField valueBinding="newDescription" id="description"}}
-<button {{action "createDeck"}}>Add cards to deck</button>
+<form {{action "createDeck" on="submit"}}>
+	<div class="form-group">
+		<label for="title">title: </label>
+		{{view Ember.TextField valueBinding="newTitle" id="title"}}
+	</div>
+	<div class="form-group">
+		<label for="description">description: </label>
+		{{view Ember.TextField valueBinding="newDescription" id="description"}}
+	</div>
+	<button>Add cards to deck</button>
+</form>
