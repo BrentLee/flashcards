@@ -3,6 +3,8 @@
 		deleteDeck: function(deck){
 			deck.deleteRecord();
 			deck.store.commit();
+			deck.store.save();
+			this.transitionToRoute('decks');
 		}
 	});
 }(window.App = window.App || {}));
