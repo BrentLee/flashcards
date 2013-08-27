@@ -28,7 +28,8 @@
         currentCard: Ember.computed(function() {
             var currentIndex = this.get('currentIndex');
             var cards = this.get('model.cards');
-            return cards.objectAt(currentIndex);
+            var card = cards.objectAt(currentIndex);
+            return card;
         }).property('currentIndex'),
 
         activateHallo: function(){
@@ -37,14 +38,18 @@
 
 		rightAnswer: function(id){
 			var card = App.Card.find(id);
-			card.correct = true;
-			alert(id + ' ' + card.id);
+			card.set('correct', true);
+			card.set('resultMessage', 'correct');
+			this.nextCard();
 		},
 
 		wrongAnswer: function(id){
 			var card = App.Card.find(id);
-			card.correct = false;
-			alert(id + ' wrong');
+			card.set('correct', false);
+			card.set('resultMessage', 'incorrect');
+			this.nextCard();
 		}
+
+
 	});
 }(window.App = window.App || {}));

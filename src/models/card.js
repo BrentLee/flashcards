@@ -2,8 +2,7 @@
 	App.Card = DS.Model.extend({
 		question: DS.attr('string'),
 		answer: DS.attr('string'),
-		deck: DS.belongsTo('App.Deck'),
-		correct: DS.attr('boolean')
+		deck: DS.belongsTo('App.Deck')
 	});
 
 	App.Card.FIXTURES = [

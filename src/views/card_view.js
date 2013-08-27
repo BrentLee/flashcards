@@ -18,15 +18,20 @@
 		        }
 		    });
 
-		    this.$().on('hallodeactivated', function(event){
-		    	var temp = this.get('newQuestion');
-		    	var temp2 = this.get('newAnswer');
-		    	var answer = event.content;
-		    	alert(answer);
-		    });
+		    // this.$().on('hallodeactivated', function(event){
+		    // 	var temp = event.currentTarget.childNodes
+		    // 	var temp2 = this.get('newAnswer');
+		    // 	var answer = event.content;
+		    // 	alert(answer);
+		    // 	$('.editable').hallo({editable: false});
+		    // });
 		},
 		willDestroyElement: function(){
 			this.$().off('hallodeactivated');
+		},
+
+		handleCardEdit: function(){
+			
 		}
 	});
 }(window.App = window.App || {}));

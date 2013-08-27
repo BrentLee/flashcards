@@ -2,10 +2,17 @@
   <div class="flip-container" id="flip-toggle">
     {{view App.CardView}}
   </div>
+  <div class="result-message">
+    <span>{{currentCard.resultMessage}}</span>
+  </div>
 	<div class="button-container">
-    <button {{action "previousCard" currentCard.index}} class="previous-button"><i class="glyphicon glyphicon-arrow-left"></i></button>
+    <button {{action "previousCard" currentCard.id}} class="previous-button"><i class="glyphicon glyphicon-arrow-left"></i></button>
+
+    <button {{action "wrongAnswer" currentCard.id}} class="wrong-answer-button"><i class="glyphicon glyphicon-thumbs-down"></i></button>
     
-    <button {{action "nextCard" currentCard.index}} class="next-button"><i class="glyphicon glyphicon-arrow-right"></i></button>
+    <button {{action "rightAnswer" currentCard.id}} class="right-answer-button"><i class="glyphicon glyphicon-thumbs-up"></i></button>
+
+    <button {{action "nextCard" currentCard.id}} class="next-button"><i class="glyphicon glyphicon-arrow-right"></i></button>
 </div>
 <div class="progress">
   <div class="progress-bar" {{bindAttr style="currentProgress"}}></div>
