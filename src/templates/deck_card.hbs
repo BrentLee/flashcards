@@ -1,13 +1,11 @@
-<div class="flip-container" id="flip-toggle">
-	<div class="flipper">
+<div class="card-edit-container">
 		<label>Question:</label>
-  		<div class="front card editable card-edit" contenteditable="true" id="card-front">
+  		<div class="card editable card-edit" contenteditable="true">
 			<h1>{{question}}</h1>
   		</div>
   		<label>Answer:</label>
-  		<div class="back card editable card-edit" contenteditable="true">
+  		<div class="card editable card-edit" contenteditable="true">
     		<h2>{{answer}}</h2>
   		</div>
-	</div>
 	<button {{action "updateCard" model}}>Update</button>
 </div>
