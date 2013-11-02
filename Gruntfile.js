@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 
         concat: {
             js: {
-                src: ['src/app.js', 'src/router.js', 'src/routes/decks_route.js', 'src/**/*.js'],
+                src: ['src/app.js', 'src/router.js', 'src/models/*.js', 'src/routes/decks_route.js', 'src/**/*.js'],
                 dest: 'build/<%= pkg.name %>.js'
             }
         },
