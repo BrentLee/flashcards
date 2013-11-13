@@ -7,7 +7,8 @@
 				var newQuestion = this.get('newQuestion');
 				var newAnswer = this.get('newAnswer');
 
-				var card = this.get('store').createRecord('card', {
+				var card = this.get('store').push('card', {
+					id: 333,
 					question: newQuestion,
 					answer: newAnswer
 				});

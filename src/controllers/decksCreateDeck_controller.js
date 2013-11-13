@@ -7,7 +7,8 @@
 
 				var description = this.get('newDescription');
 
-				var deck = this.get('store').createRecord('deck', {
+				var deck = this.get('store').push('deck', {
+					id: 444,
 					title: title,
 					description: description
 				});
