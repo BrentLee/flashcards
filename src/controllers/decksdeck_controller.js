@@ -9,22 +9,6 @@
 			return 'width: '+progress+'%;';
 		}).property('currentIndex'),
 
-		nextCard: function() {
-			var currentIndex = this.get('currentIndex');
-			var cards = this.get('model.cards');
-			var length = cards.get('length');
-			if(currentIndex + 1 < length){
-				this.incrementProperty('currentIndex');
-			}
-        },
-
-        previousCard: function() {
-        	var currentIndex = this.get('currentIndex');
-        	if(currentIndex - 1 >= 0){
-            	this.decrementProperty('currentIndex');
-            }
-        },
-
         currentCard: Ember.computed(function() {
             var currentIndex = this.get('currentIndex');
             var cards = this.get('model.cards');
@@ -32,24 +16,41 @@
             return card;
         }).property('currentIndex'),
 
-        activateHallo: function(){
-			$('.editable').hallo({editable: true});
-		},
+        actions: {
+			nextCard: function() {
+				var currentIndex = this.get('currentIndex');
+				var cards = this.get('model.cards');
+				var length = cards.get('length');
+				if(currentIndex + 1 < length){
+					this.incrementProperty('currentIndex');
+				}
+	        },
 
-		rightAnswer: function(id){
-			var card = App.Card.find(id);
-			card.set('correct', true);
-			card.set('resultMessage', 'correct');
-			this.nextCard();
-		},
+	        previousCard: function() {
+	        	var currentIndex = this.get('currentIndex');
+	        	if(currentIndex - 1 >= 0){
+	            	this.decrementProperty('currentIndex');
+	            }
+	        },
 
-		wrongAnswer: function(id){
-			var card = App.Card.find(id);
-			card.set('correct', false);
-			card.set('resultMessage', 'incorrect');
-			this.nextCard();
+	        activateHallo: function(){
+				$('.editable').hallo({editable: true});
+			},
+
+			rightAnswer: function(id){
+				var card = App.Card.find(id);
+				card.set('correct', true);
+				card.set('resultMessage', 'correct');
+				this.nextCard();
+			},
+
+			wrongAnswer: function(id){
+				var card = App.Card.find(id);
+				card.set('correct', false);
+				card.set('resultMessage', 'incorrect');
+				this.nextCard();
+			}
 		}
-
 
 	});
 }(window.App = window.App || {}));

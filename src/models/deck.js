@@ -5,7 +5,7 @@
 		views: DS.attr('number'),
 		creator: DS.attr('string'),
 		created: DS.attr('date'),
-		cards: DS.hasMany('card')
+		cards: DS.hasMany('card', {async: true})
 	});
 }(window.App = window.App || {}));
 
