@@ -7,6 +7,7 @@
 		doubleClick: function(){
 			document.querySelector("#flip-toggle").classList.toggle("flip");
 		},
+		
 		didInsertElement: function(){
 			$('.editable').hallo({
 				editable: false,
